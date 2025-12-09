@@ -89,9 +89,8 @@ window.addEventListener('scroll', function (event) {
   });
 });
 
-// ...existing code...
 $(function() {
-  var $h = $('.content-section__headline');
+  var $h = $('.content-section__headline span');
   if (!$h.length) return;
 
   var hue = 0;
@@ -109,7 +108,6 @@ $(function() {
 
   requestAnimationFrame(tick);
 });
-// ...existing code...
   </script>
 
   </body>
