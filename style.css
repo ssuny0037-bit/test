@@ -5,15 +5,6 @@
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #000;
-}
-h1 span {
-  color: orangered;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
 }

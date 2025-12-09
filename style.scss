@@ -1,15 +1,5 @@
 $black: #000;
 *{margin:0; padding:0; box-sizing:border-box;}
-h1 {
-    font: {
-        size: 18px;
-        weight: bold;
-    }
-    color: $black;
-    span { 
-        color: orangered; 
-    }
-}
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
