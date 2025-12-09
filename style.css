@@ -16,10 +16,10 @@ body {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(-90deg, #D4ADCF, #3E2A35);
+  background: linear-gradient(-90deg, #000000, #040024);
 }
 .content-section--fullpage:first-of-type {
-  background: linear-gradient(90deg, #3E2A35, #D4ADCF);
+  background: linear-gradient(90deg, #040024, #000000);
 }
 
 .content-section__headline-container {
