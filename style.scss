@@ -1,13 +1,4 @@
-$black:#000;
-
-h1{
-    font{
-        size:18px;
-        weight:bold;
-    }
-    color:$black
-    span{color:orangered}
-}$black: #000;
+$black: #000;
 
 h1 {
     font: {
@@ -15,5 +6,7 @@ h1 {
         weight: bold;
     }
     color: $black;
-    span { color: orangered; }
+    span { 
+        color: orangered; 
+    }
 }
