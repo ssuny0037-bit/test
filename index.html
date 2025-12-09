@@ -13,7 +13,7 @@
 
   <section class="content-section--fullpage">
     <div class="content-section__headline-container">
-      <h1 class="content-section__headline">LUNCH!</h1>
+      <h1 class="content-section__headline">NEW BRAND</h1>
     </div>
 
     <span class="scroll-indicator">
@@ -89,20 +89,23 @@ window.addEventListener('scroll', function (event) {
   });
 });
 
-$(function() {
-  var $h = $('.content-section__headline span');
-  if (!$h.length) return;
+$(function(){
+  // h1과 스팬(각 글자)을 모두 선택
+  var $targets = $('.content-section__headline, .content-section__headline-container span');
+  if (!$targets.length) return;
 
-  var hue = 0;
-  var last = null;
-  var speed = 0.02; // degrees per ms (조절 가능, 작을수록 느려짐)
+  // 숨겨져 있으면 보이게 함 (필요 시 제거)
+  $('.content-section__headline').css('opacity', 1);
 
-  function tick(now) {
+  var hue = 0, last = null;
+  var speed = 0.02; // 조절: 작게 하면 느려짐
+
+  function tick(now){
     if (last === null) last = now;
     var dt = now - last;
     last = now;
     hue = (hue + dt * speed) % 360;
-    $h.css('color', 'hsl(' + hue + ', 100%, 50%)');
+    $targets.css('color', 'hsl(' + Math.round(hue) + ', 100%, 50%)');
     requestAnimationFrame(tick);
   }
 
