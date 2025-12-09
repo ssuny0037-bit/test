@@ -88,6 +88,28 @@ window.addEventListener('scroll', function (event) {
     fadeOut(element, topDistance, tweenDistance);
   });
 });
+
+// ...existing code...
+$(function() {
+  var $h = $('.content-section__headline');
+  if (!$h.length) return;
+
+  var hue = 0;
+  var last = null;
+  var speed = 0.02; // degrees per ms (조절 가능, 작을수록 느려짐)
+
+  function tick(now) {
+    if (last === null) last = now;
+    var dt = now - last;
+    last = now;
+    hue = (hue + dt * speed) % 360;
+    $h.css('color', 'hsl(' + hue + ', 100%, 50%)');
+    requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
+});
+// ...existing code...
   </script>
 
   </body>
