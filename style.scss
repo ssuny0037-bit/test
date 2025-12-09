@@ -10,3 +10,72 @@ h1 {
         color: orangered; 
     }
 }
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.content-section {
+  &--fullpage {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-90deg, #D4ADCF, #3E2A35);
+
+    &:first-of-type {
+      background: linear-gradient(90deg, #3E2A35, #D4ADCF);
+    }
+  }
+}
+
+.content-section__headline-container {
+  position: relative;
+
+  span {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 10px;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
+
+.content-section__headline {
+  margin: 0;
+  opacity: 0;
+  font-weight: 700;
+  color: #DDE1E4;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 10px;
+  display: block;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 1px;
+    height: 25px;
+    background-color: #000;
+    margin: auto;
+    content: '';
+  }
+}
